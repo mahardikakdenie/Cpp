@@ -24,7 +24,7 @@ public:
         cout << "\nNama Mahasiswa : " << this->Nama << endl;
         cout << "Nomor Induk Mahasiswa : " << this->Nim << endl;
         cout << "Nama Jurusan : " << this->Jurusan << endl;
-        cout << "Index Prestasi Kriteria : " << this->Ipk << endl;
+        cout << "Index Prestasi Kumulatif : " << this->Ipk << endl;
     }
 };
 int main(int argc, char const *argv[])
