@@ -15,7 +15,7 @@ public:
     //construktor dengan parameter
 
     Mahasiswa(string inputNama, string inputNim, string inputJurusan, double inputIpk)
-    {
+    { 
         this->Nama = inputNama;
         Mahasiswa::Nim = inputNim;
         Mahasiswa::Jurusan = inputJurusan;
