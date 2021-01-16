@@ -15,19 +15,19 @@ public:
     //construktor dengan parameter
 
     Mahasiswa(string inputNama, string inputNim, string inputJurusan, double inputIpk)
-    { 
+    {
         this->Nama = inputNama;
-        Mahasiswa::Nim = inputNim;
-        Mahasiswa::Jurusan = inputJurusan;
+        this->Nim = inputNim;
+        this->Jurusan = inputJurusan;
         this->Ipk = inputIpk;
 
-        cout << "\nNama Mahasiswa : " << Mahasiswa::Nama << endl;
-        cout << "Nomor Induk Mahasiswa : " << Mahasiswa::Nim << endl;
-        cout << "Nama Jurusan : " << Mahasiswa::Jurusan << endl;
-        cout << "Index Prestasi Kriteria : " << Mahasiswa::Ipk << endl;
+        cout << "\nNama Mahasiswa : " << this->Nama << endl;
+        cout << "Nomor Induk Mahasiswa : " << this->Nim << endl;
+        cout << "Nama Jurusan : " << this->Jurusan << endl;
+        cout << "Index Prestasi Kriteria : " << this->Ipk << endl;
     }
 };
-int main(int argc, char const *argv[])    
+int main(int argc, char const *argv[])
 {
     int jumlah;
     string nama[100], nim[100], Jurusan[100];
@@ -35,9 +35,10 @@ int main(int argc, char const *argv[])
     system("cls");
     cout << "masukan jumlah mahasiswa : ";
     cin >> jumlah;
-
+    system("cls");
     for (int i = 0; i < jumlah; i++)
     {
+        system("cls");
         cout << "\nMasukan Nama : ";
         cin >> nama[i];
         cout << "Masukan Nim : ";
@@ -47,6 +48,7 @@ int main(int argc, char const *argv[])
         cout << "Masukan Ipk : ";
         cin >> Ipk[i];
     }
+    system("cls");
     for (int i = 0; i < jumlah; i++)
     {
         Mahasiswa Mahasiswa3 = Mahasiswa(nama[i], nim[i], Jurusan[i], Ipk[i]);
