@@ -27,7 +27,7 @@ public:
         cout << "Index Prestasi Kriteria : " << Mahasiswa::Ipk << endl;
     }
 };
-int main(int argc, char const *argv[])
+int main(int argc, char const *argv[])    
 {
     int jumlah;
     string nama[100], nim[100], Jurusan[100];
