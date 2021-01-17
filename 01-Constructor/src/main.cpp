@@ -35,51 +35,31 @@ int main(int argc, char const *argv[])
     system("cls");
     cout << "masukan jumlah mahasiswa : ";
     cin >> jumlah;
+    MainMenu:
     system("cls");
-    for (int i = 0; i < jumlah; i++)
+    if (jumlah < 0)
     {
+        for (int i = 0; i < jumlah; i++)
+        {
+            system("cls");
+            cout << "\nMasukan Nama : ";
+            cin >> nama[i];
+            cout << "Masukan Nim : ";
+            cin >> nim[i];
+            cout << "Masukan Jurusan : ";
+            cin >> Jurusan[i];
+            cout << "Masukan Ipk : ";
+            cin >> Ipk[i];
+        }
         system("cls");
-        cout << "\nMasukan Nama : ";
-        cin >> nama[i];
-        cout << "Masukan Nim : ";
-        cin >> nim[i];
-        cout << "Masukan Jurusan : ";
-        cin >> Jurusan[i];
-        cout << "Masukan Ipk : ";
-        cin >> Ipk[i];
+        for (int i = 0; i < jumlah; i++)
+        {
+            Mahasiswa Mahasiswa3 = Mahasiswa(nama[i], nim[i], Jurusan[i], Ipk[i]);
+        }
     }
-    system("cls");
-    for (int i = 0; i < jumlah; i++)
+    else
     {
-        Mahasiswa Mahasiswa3 = Mahasiswa(nama[i], nim[i], Jurusan[i], Ipk[i]);
+        goto MainMenu;
     }
+    
 }
-
-// class Dagang
-// {
-// public :
-// int harga;
-// string nama;
-// string pedagang;
-// string pasar;
-
-//     Dagang(int harga,string nama,string pedagang,string pasar){
-//         Dagang::harga=harga;
-//         Dagang::nama=nama;
-//         Dagang::pedagang=pedagang;
-//         Dagang::pasar=pasar;
-
-//         cout<<Dagang::harga<<endl;
-//         cout<<Dagang::nama<<endl;
-//         cout<<Dagang::pedagang<<endl;
-//         cout<<Dagang::pasar<<endl;
-//     }
-
-// };
-
-// int main(int argc, char const *argv[])
-// {
-
-//     Dagang pasar1=Dagang(9000,"Reihan Awaludin","Baso","cibaduyut");
-
-// }
