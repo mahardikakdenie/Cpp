@@ -6,14 +6,15 @@ using namespace std;
 // class dengan Construktor
 class Mahasiswa
 {
-public:
+protected:
     string Nama;
     string Nim;
     string Jurusan;
     double Ipk;
+    float avarage;
 
     //construktor dengan parameter
-
+    public:
     Mahasiswa(string inputNama, string inputNim, string inputJurusan, double inputIpk)
     {
         this->Nama = inputNama;
@@ -26,6 +27,19 @@ public:
         cout << "Nama Jurusan : " << this->Jurusan << endl;
         cout << "Index Prestasi Kumulatif : " << this->Ipk << endl;
     }
+    void Avarage(float total, int jumlah)
+    {
+        cout << "Jumlah Keseluruhan : " << total << endl;
+        avarage = total / jumlah;
+        cout << "Rata - rata  : " << avarage << endl;
+    }
+};
+
+class avarage : public Mahasiswa {
+    public:
+    void avg(){
+        cout << "Helo wordl" << endl;
+    }
 };
 int main(int argc, char const *argv[])
 {
@@ -35,31 +49,30 @@ int main(int argc, char const *argv[])
     system("cls");
     cout << "masukan jumlah mahasiswa : ";
     cin >> jumlah;
-    MainMenu:
-    system("cls");
-    if (jumlah < 0)
+    for (int i = 0; i < jumlah; i++)
     {
-        for (int i = 0; i < jumlah; i++)
-        {
-            system("cls");
-            cout << "\nMasukan Nama : ";
-            cin >> nama[i];
-            cout << "Masukan Nim : ";
-            cin >> nim[i];
-            cout << "Masukan Jurusan : ";
-            cin >> Jurusan[i];
-            cout << "Masukan Ipk : ";
-            cin >> Ipk[i];
-        }
         system("cls");
-        for (int i = 0; i < jumlah; i++)
-        {
-            Mahasiswa Mahasiswa3 = Mahasiswa(nama[i], nim[i], Jurusan[i], Ipk[i]);
-        }
+        cout << "\nMasukan Nama : ";
+        cin >> nama[i];
+        cout << "Masukan Nim : ";
+        cin >> nim[i];
+        cout << "Masukan Jurusan : ";
+        cin >> Jurusan[i];
+        cout << "Masukan Ipk : ";
+        cin >> Ipk[i];
     }
-    else
+    system("cls");
+    for (int i = 0; i < jumlah; i++)
     {
-        goto MainMenu;
+        Mahasiswa mahasiswa3 = Mahasiswa(nama[i], nim[i], Jurusan[i], Ipk[i]);
     }
-    
+    float avg, total;
+    for (int i = 0; i < jumlah; i++)
+    {
+        total += Ipk[i];
+    }
+    cout << "\nJumlah Keseluruhan : " << total << endl;
+    avg = total / jumlah;
+    cout << "Rata - rata : " << avg << endl;
+
 }
